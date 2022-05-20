@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+/*
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Android';
+    src: url('../idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #c5ebd6;
+    font-family: var(--fonte-padrao);
+}
+a.externo::after {
+    content: '\1F517'; /* EMOJI DE LINK APÓS A PALAVRA COMO ÂNCORA */
+}
+main P{
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+}
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    
+    /* tamanho do cabeçalho */
+    min-height: 150px;
+
+    /* texto centralizado */
+    text-align: center;
+
+    /* afastar a margem de cima do texto*/
+    padding-top: 30px;
+
+}
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.247);
+    
+}
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    
+    /* tamanho da fonte*/
+    border: 1.2em;
+
+    /* o texto vai ser de 600px */
+    max-width: 600px;
+    
+    /* borda lateral esquerda e direita vão está afastado 10px cada */
+    padding-left: 10px;
+    padding-right: 10px;
+
+    /* o texto fica no meio, centralizado*/
+    margin: auto;
+
+    margin-top: 10px;
+}
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.568);
+   
+}
+nav > a{
+    color: var(--cor1);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+
+    /* QUANDO EU PASSO OMOUSE EM CIMA ELE DEMORA 0.5SEGUNDOS PARA DESAPARECER */
+    transition-duration: 0.5s;
+}
+nav > a:hover {
+    background-color: var(--cor4);
+}
+main{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
+
+    /* AFASTEI O TEXTO DA BORDA */
+    padding: 20px;
+
+    /* AQUI QUE ACERTA A LARGURA PARA NÃO QUEBRAR A TELA, RESPONSIVIDADE */
+    min-width: 280px; 
+    max-width: 800px;
+
+    /* AQUI A TELA FICA NO MEIO, CENTRALIZADA */
+    margin: auto;
+
+    background-color: white;
+
+    /* CONTEÚDO PRINCIPAL LONGE DO RODAPÉ */
+    margin-bottom: 30px;
+
+    /* ARREDONDEI A MARGEM DE BAIXO DO TEXTO */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+}
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4); 
+    font-size: 1.3em; 
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+main P{
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em; /* entre uma linha e outra não tem espaço, isso ajuda a não se enrolar na hora da leitura e ler o mesmo parágrafo 2 vezes */
+    font-size: 1em;
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+    
+}
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px, 6px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+main img{
+    width: 100%;
+}
+div.video{
+    background-color: var(--cor5);
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px;
+    
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+div.video > inframe {
+    /* POSIÇÃO DO VÍDEO */
+    position: absolute;
+
+    /* O VÍDEO VAI FICAR AFASTADO 5% A DIREITA E A ESQUERDA */
+    top:5%;
+    left: 5%;
+
+    /* ELE VAI OCUPAR 80% DO BACKGROUND */
+    width: 80%;
+
+    /* VAI FICAR NO CENTRO */
+    height: 905;
+}
+#fla {
+    /* DIMINUI A IMAGEM DO BUGDROIDO COM UM ID, NOMEEI ELE DE FLA EM UMA DIV */
+    max-width: 30%; /* TAMANHO DELE É DE 30% */
+    margin: auto; /* ESTÁ AUTO POIS FICA CENTRALIZADO */
+    display: block;
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+}
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* COLOQUEI A MARGEM (quer aprender mais) PARA CRESCER PARA FORA */
+    border-radius: 10px 10px 0px 0px;
+}
+#mengo {
+    /* COLOCAR O SÍMBOLO DE CHECK NA LISTA AO INVES DO CIRCULO NORMAL, só que não foi compatível
+    list-style-type: '\2714';*/
+    list-style-type: '\1F518';
+
+    list-style: inside; /* COLOCAR A BOLINHA DA LISTA NÃO ORDENADA DENTRO DO BACKGROUND */
+
+    columns: 2; /* DIVIDO A LISTA EM 2 COLUNAS*/
+
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
